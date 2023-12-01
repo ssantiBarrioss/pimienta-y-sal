@@ -21,8 +21,8 @@ const productos= [{
 ]
 
 const indexController= {
-    home: (req, res) => {
-        res.render("home",{title, productos})
+    index: (req, res) => {
+        res.render("index",{title:"Sal & Pimienta", productos})
     }
 }
 
