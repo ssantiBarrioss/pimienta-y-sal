@@ -10,10 +10,10 @@
     <!-- Navbar (sit on top) -->
     <nav class="ps-top">
       <div class="ps-bar ps-white ps-padding ps-card ps-nav">
-        <a href="#home" class="ps-bar-item ps-button">Pimienta & Sal</a>
+        <a href="/#home" class="ps-bar-item ps-button">Pimienta & Sal</a>
         <!-- Right-sided navbar links. Hide them on small screens -->
         <div class="ps-right ps-hide-small">
-          <a href="#about" class="ps-bar-item ps-button">About</a>
+          <a href="/#about" class="ps-bar-item ps-button">About</a>
           <a href="#menu" class="ps-bar-item ps-button">Menu</a>
         </div>
       </div>
@@ -73,17 +73,21 @@
       <!-- Menu Section -->
       <div class="ps-row ps-padding-64" id="menu">
         <div class="ps-col l6 ps-padding-large">
-          <h1 class="ps-center">Nuentro Menu</h1>
+          <h1 class="ps-center">Nuestro Menu</h1>
           <br />
           <% productos.forEach(producto => { %>
 
-          <h4><%= productos.nombre %></h4>
+            <a href="/detail/<%= producto.id %>">
+ 
+          <h4><%= producto.nombre %></h4>
           <p class="ps-text-grey">
-            <%= productos.descripcion %> U$S <%=productos.precio%>
+            <%= producto.descripcion %> U$S <%=producto.precio%>
           </p>
+          </a>
           <br />
+          
           <% }); %>
-         
+        </div>
 
         <div class="ps-col l6 ps-padding-large ps-img-menu">
           <img
